@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/digiconfigs
+# catalog-date 2007-03-05 22:02:45 +0100
+# catalog-license lppl
+# catalog-version 0.5
 Name:		texlive-digiconfigs
 Version:	0.5
 Release:	1
@@ -42,6 +48,7 @@ mechanism for displaying these configurations.
 %doc %{_texmfdistdir}/doc/latex/digiconfigs/README
 %doc %{_texmfdistdir}/doc/latex/digiconfigs/digiconfigs.pdf
 %doc %{_texmfdistdir}/doc/latex/digiconfigs/digiconfigs.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ mechanism for displaying these configurations.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
